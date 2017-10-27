@@ -1,14 +1,3 @@
-import data_read 
-import train_word2vec
-import vector_avg
-import get_sentences
-import centroid_bow
-import train
-import write_result
-import cPickle
-from sklearn.externals import joblib
-import pandas as pd
-
 def do(X_test_features):
 	results = X_test_features.copy()
 	results['EAP'] = X_test_features['id']
