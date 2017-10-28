@@ -12,9 +12,9 @@ def do(result,test):
 	# Write the test results
 	data=OrderedDict()
 	data["id"]=test["id"] 
-	data["EAP"]=result["EAP"]
-	data["HPL"]=result["HPL"]	
-	data["MWS"]=result["MWS"]
+	data["EAP"]=result[0]#["EAP"]
+	data["HPL"]=result[1]#["HPL"]	
+	data["MWS"]=result[2]#["MWS"]
 	output = pd.DataFrame(data=data)
 	filename = "../results/result"+str(file_count)+".csv"
 	output.to_csv( filename, index=False )
